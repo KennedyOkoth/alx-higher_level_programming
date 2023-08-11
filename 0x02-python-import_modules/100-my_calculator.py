@@ -1,13 +1,10 @@
 #!/usr/bin/python3
 from sys import argv
 from sys import exit
-from calculator_1 import add
-from calculator_1 import sub
-from calculator_1 import mul
-from calculator_1 import div
+from calculator_1 import add, sub, mul, div
 
 if __name__ == "__main__":
-    length_of_argv = len(argv)
+    length_of_argv = len(argv) - 1
     if length_of_argv < 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
