@@ -1,15 +1,11 @@
-#!/usr/bin/python3
-"""A class Square that defines a square"""
-
-
 class Square:
     """A class Square that defines a square with a size private key"""
 
     def __init__(self, size=0, position=(0, 0)):
         """Instantiation with optional size:"""
 
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
