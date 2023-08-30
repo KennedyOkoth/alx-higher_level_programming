@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""A class Square that defines a square with a size private key"""
+"""A class Square that defines a square"""
 
 
 class Square:
@@ -9,6 +9,6 @@ class Square:
         """Instation with size
 
         Args:
-            size (Any type): private instance attribute
+            size (Any type): Size of the square
         """
-        self._size = size
+        self.__size = size
