@@ -15,14 +15,9 @@ class Square:
             TypeError: raised when the value is not of int type.
             ValueError: raised when value is less than 0
         """
+
         self.__size = size
-        try:
-            if not isinstance(self.__size, int):
-                raise TypeError("size must be an integer")
-        except TypeError as e:
-            print(e)
-        try:
-            if self.__size < 0:
-                raise ValueError("size must be >= 0")
-        except ValueError as v:
-            print(v)
+        if not isinstance(self.__size, int):
+            raise TypeError("size must be an integer")
+        if self.__size < 0:
+            raise ValueError("size must be >= 0")
