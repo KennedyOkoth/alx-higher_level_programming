@@ -43,3 +43,10 @@ class Square:
             area: size sqaured
         """
         return self.__size**2
+
+    def my_print(self):
+        """A method to print a square"""
+        if self.__size == 0:
+            print()
+        else:
+            print(self.__size * "#")
