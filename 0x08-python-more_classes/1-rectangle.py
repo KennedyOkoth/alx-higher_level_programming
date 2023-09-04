@@ -1,9 +1,14 @@
 #!/usr/bin/python3
-"""A rectangle class"""
+"""
+This is the "Rectangle"  module.
+
+This module provides a Rectangle class.
+"""
 
 
 class Rectangle:
-    """A rectangle class"""
+    """A Rectangle class with attributes  width and height
+    """
 
     def __init__(self, width=0, height=0):
         """Initializes a Rectangle object with the given width and height.
@@ -35,7 +40,7 @@ class Rectangle:
             TypeError: If the value is not an integer.
             ValueError: If the value is less than 0.
         """
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("width must be an integer")
         elif self.__width < 0:
             raise ValueError("width must be >=0")
@@ -61,7 +66,7 @@ class Rectangle:
             TypeError: If the value is not an integer.
             ValueError: If the value is less than 0.
         """
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("height must be an integer")
         elif self.__height < 0:
             raise ValueError("height must be >=0")
