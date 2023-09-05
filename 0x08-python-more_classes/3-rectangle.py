@@ -80,7 +80,7 @@ class Rectangle:
             return count
         for x in range(self.__height):
             count += "#" * self.__height
-            if x is not self.__height - 1:
+            if x != self.__height - 1:
                 count += "\n"
         return count
 
