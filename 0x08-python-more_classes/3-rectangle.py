@@ -73,16 +73,10 @@ class Rectangle:
 
     def __str__(self):
         """Return a string representation of the rectangle using '#'
-        characters.
-        """
-        count = ""
-        if self.__height == 0 or self.__width == 0:
-            return count
-        for x in range(self.__height):
-            count += "#" * self.__height
-            if x != self.__height - 1:
-                count += "\n"
-        return count
+        characters."""
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        return "\n".join(["#" * self.__width] * self.__height)
 
     def area(self):
         """
