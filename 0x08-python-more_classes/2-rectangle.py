@@ -75,7 +75,8 @@ class Rectangle:
         """
         Calculate and return the area of the rectangle.
         Returns:
-        float: The area of the rectangle, which is the product of its height and width.
+        float: The area of the rectangle, which is the product of its height
+        and width.
         """
         reactangle_area = self.__height * self.__width
         return reactangle_area
@@ -84,8 +85,10 @@ class Rectangle:
         """Calculate and return the perimeter of the rectangle.
 
         Returns:
-            float: The perimeter of the rectangle, which is 2 times the sum of its height and width,
-            unless either the height or width is 0, in which case the perimeter is 0.
+            float: The perimeter of the rectangle, which is 2 times the sum of
+            its height and width,
+            unless either the height or width is 0, in which case the
+            perimeter is 0.
         """
         if self.__height == 0 or self.__width == 0:
             rectangle_perimeter = 0
