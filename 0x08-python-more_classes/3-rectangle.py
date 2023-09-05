@@ -71,6 +71,19 @@ class Rectangle:
             raise ValueError("height must be >=0")
         self.__height = value
 
+    def __str__(self):
+        """Return a string representation of the rectangle using '#'
+        characters.
+        """
+        count = ""
+        if self.__height == 0 or self.__width == 0:
+            return count
+        for x in range(self.__height):
+            count += "#" * self.__height
+            if x is not self.__height - 1:
+                count += "\n"
+        return count
+
     def area(self):
         """
         Calculate and return the area of the rectangle.
@@ -95,19 +108,6 @@ class Rectangle:
         else:
             rectangle_perimeter = 2 * (self.__height + self.__width)
         return rectangle_perimeter
-
-    def __str__(self):
-        """Return a string representation of the rectangle using '#'
-        characters.
-        """
-        count = ""
-        if self.__height == 0 or self.__width == 0:
-            return count
-        for x in range(self.__height):
-            count += "#" * self.__height
-            if x is not self.__height - 1:
-                count += "\n"
-        return count
 
     def __repr__(self):
         """Return a string representation of the rectangle for debugging."""
