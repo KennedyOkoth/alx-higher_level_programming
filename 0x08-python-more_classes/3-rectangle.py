@@ -97,7 +97,9 @@ class Rectangle:
         return rectangle_perimeter
 
     def __str__(self):
-        """Return a string representation of the rectangle using '#' characters."""
+        """Return a string representation of the rectangle using '#' 
+            characters.
+        """
         if self.__height == 0 or self.__width == 0:
             return ""
         else:
