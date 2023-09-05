@@ -97,13 +97,17 @@ class Rectangle:
         return rectangle_perimeter
 
     def __str__(self):
-        """Return a string representation of the rectangle using '#' 
-            characters.
+        """Return a string representation of the rectangle using '#'
+        characters.
         """
+        count = ""
         if self.__height == 0 or self.__width == 0:
-            return ""
-        else:
-            return "\n".join(["#" * self.__width] * self.__height)
+            return count
+        for x in range(self.__height):
+            count += "#" * self.__height
+            if x is not self.__height - 1:
+                count += "\n"
+        return count
 
     def __repr__(self):
         """Return a string representation of the rectangle for debugging."""
