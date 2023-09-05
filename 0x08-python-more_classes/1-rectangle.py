@@ -7,8 +7,7 @@ This module provides a Rectangle class.
 
 
 class Rectangle:
-    """A Rectangle class with attributes  width and height
-    """
+    """A Rectangle class with attributes  width and height"""
 
     def __init__(self, width=0, height=0):
         """Initializes a Rectangle object with the given width and height.
@@ -37,7 +36,7 @@ class Rectangle:
             value (int): The new width value.
 
         Raises:
-            
+
             ValueError: If the value is less than 0.
         """
         if not isinstance(value, int):
