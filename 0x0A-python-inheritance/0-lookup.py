@@ -10,17 +10,3 @@ def lookup(obj):
     - list: A list containing the names of attributes and methods.
     """
     return dir(obj)
-
-
-# Example usage:
-class Example:
-    def __init__(self):
-        self.name = "Example"
-
-    def greet(self):
-        return f"Hello, I'm {self.name}!"
-
-
-example_obj = Example()
-result = lookup(example_obj)
-print(result)
