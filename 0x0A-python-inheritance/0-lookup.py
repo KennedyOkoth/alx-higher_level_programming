@@ -9,13 +9,7 @@ def lookup(obj):
     Returns:
     - list: A list containing the names of attributes and methods.
     """
-    return [
-        attr
-        for attr in dir(obj)
-        if not callable(getattr(obj, attr))
-        or callable(getattr(obj, attr))
-        and not attr.startswith("__")
-    ]
+    return dir(obj)
 
 
 # Example usage:
