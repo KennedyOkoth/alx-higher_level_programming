@@ -1,33 +1,32 @@
 #!/usr/bin/python3
-class Item:
+def lookup(obj):
     """
-    A class representing items with a name and age.
+    Returns a list of available attributes and methods of an object.
 
-    Attributes:
-    - name (str): The name of the item.
-    - age (int): The age of the item.
+    Args:
+    - obj (object): The object for which to retrieve attributes and methods.
 
-    Class Attributes:
-    - all (list): A list to store all created Item instances.
+    Returns:
+    - list: A list containing the names of attributes and methods.
     """
-
-    all = []
-
-    def __init__(self, name, age):
-        """
-        Initializes a new Item instance with the given name and age.
-
-        Args:
-        - name (str): The name of the item.
-        - age (int): The age of the item.
-        """
-        self.age = age
-        self.name = name
-        Item.all.append(self)
+    return [
+        attr
+        for attr in dir(obj)
+        if not callable(getattr(obj, attr))
+        or callable(getattr(obj, attr))
+        and not attr.startswith("__")
+    ]
 
 
-item1 = Item("Item1", 5)
-item2 = Item("Item2", 8)
+# Example usage:
+class Example:
+    def __init__(self):
+        self.name = "Example"
 
-# Accessing all created Item instances
-all_items = Item.all
+    def greet(self):
+        return f"Hello, I'm {self.name}!"
+
+
+example_obj = Example()
+result = lookup(example_obj)
+print(result)
