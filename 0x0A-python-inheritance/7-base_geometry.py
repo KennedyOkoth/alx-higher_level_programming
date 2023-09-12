@@ -19,6 +19,6 @@ class BaseGeometry:
             ValueError: If the value is not greater than 0.
         """
         if not isinstance(value, int):
-            raise TypeError("{} must be an integer".format(name))
+            raise TypeError("{} must be an integer".format(value))
         if value <= 0:
-            raise ValueError("{} must be greator than 0".format(name))
+            raise ValueError("{} must be greator than 0".format(value))
