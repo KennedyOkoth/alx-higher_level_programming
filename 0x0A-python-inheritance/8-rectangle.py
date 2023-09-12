@@ -21,12 +21,10 @@ class BaseGeometry:
             TypeError: If the value is not an integer.
             ValueError: If the value is not greater than 0.
         """
-        assert type(name) == str
         if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greator than 0".format(name))
-        self.value = value
 
 
 class Rectangle(BaseGeometry):
