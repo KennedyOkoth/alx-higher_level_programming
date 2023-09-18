@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Rectangle class for representing and manipulating rectangles.
+"""
+
 from models.base import Base
 
 
