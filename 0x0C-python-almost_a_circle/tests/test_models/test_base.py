@@ -17,8 +17,6 @@ from models.rectangle import Rectangle
 from models.square import Square
 
 
-import unittest
-from models.base import Base
 
 class TestBase(unittest.TestCase):
 
