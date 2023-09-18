@@ -104,6 +104,8 @@ class Rectangle(Base):
         return self.__x
 
     @x.setter
+"""
+Setter method for setting the x-coordinate of the rectangle's position."""
     def x(self, value):
         if type(value) != int:
             raise TypeError("x must be an integer")
