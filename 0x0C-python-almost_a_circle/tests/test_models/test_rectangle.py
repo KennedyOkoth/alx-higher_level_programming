@@ -70,7 +70,63 @@ class TestRectangle(unittest.TestCase):
             r = Rectangle(10, -2)
         self.assertTrue("height must be > 0" in str(context.exception))
 
-    # Tests for x and y validations
+    def test_area(self):
+        r = Rectangle(3, 4)
+        self.assertEqual(r.area(), 12)
+
+    def test_area_changed_values(self):
+        r = Rectangle(3, 4)
+        r.width = 5
+        r.height = 6
+        self.assertEqual(r.area(), 30)
+
+    def test_area_zero(self):
+        r = Rectangle(0, 4)
+        self.assertEqual(r.area(), 0)
+    
+    def test_area_negative(self):
+        r = Rectangle(-3, 4)
+        self.assertEqual(r.area(), -12)
+
+    def test_display_with_x(self):
+        r = Rectangle(3, 2, 1, 0)
+        with patch('sys.stdout', new=StringIO()) as fake_out:
+            r.display()
+            self.assertEqual(fake_out.getvalue(), ' ###\n ###\n')
+
+    def test_display_with_y(self):
+        r = Rectangle(3, 2, 0, 2)
+        with patch('sys.stdout', new=StringIO()) as fake_out:
+            r.display()
+            self.assertEqual(fake_out.getvalue(), '\n\n###\n###\n')
+
+    def test_display_xy(self):
+        r = Rectangle(3, 2, 1, 2)
+        with patch('sys.stdout', new=StringIO()) as fake_out:
+            r.display()
+            self.assertEqual(fake_out.getvalue(), '\n\n ###\n ###\n')
+
+    def test_display_zero(self):
+        r = Rectangle(0, 0, 2, 1)
+        with patch('sys.stdout', new=StringIO()) as fake_out:
+            r.display()
+            self.assertEqual(fake_out.getvalue(), '\n')
+
+    def test_str(self):
+        r = Rectangle(3, 4, 1, 2, 12)
+        self.assertEqual(str(r), "[Rectangle] (12) 1/2 - 3/4")
+
+    def test_str_changed_attributes(self):
+        r = Rectangle(3, 4, 1, 2, 12)
+        r.width = 8  
+        r.height = 6
+        r.x = 4
+        r.y = 5  
+        self.assertEqual(str(r), "[Rectangle] (12) 4/5 - 8/6")
+
+    def test_str_zero_attributes(self):
+        r = Rectangle(0, 0, 0, 0, 12)
+        self.assertEqual(str(r), "[Rectangle] (12) 0/0 - 0/0")
 
 if __name__ == '__main__':
     unittest.main()
