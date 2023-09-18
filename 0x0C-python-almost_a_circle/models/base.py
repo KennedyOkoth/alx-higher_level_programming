@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Base class for managing common attributes and methods of other classes.
+"""
 import json
 import csv
 import turtle
