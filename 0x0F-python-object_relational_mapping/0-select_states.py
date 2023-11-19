@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/python3
 
 """ Connecting to hbtn_0e_0_usa database and list all states. """
 import MySQLdb
