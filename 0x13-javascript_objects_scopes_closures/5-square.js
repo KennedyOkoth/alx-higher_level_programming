@@ -4,5 +4,9 @@ class Square extends Rectangle {
   constructor(size) {
     super(size, size);
   }
+
+  get size() {
+    return super.getWidth();
+  }
 }
 module.exports = Square;
