@@ -21,7 +21,7 @@
 * Why JavaScript programming is amazing
 * How to create an object in JavaScript
 * What <code>this</code> means
-* What <code>undefined</code> means 
+* What <code>undefined</code> means
 * Why the variable type and scope is important
 * What is a closure
 * What is a prototype
@@ -44,4 +44,3 @@
 | 11. Factor index | [100-map.js](./100-map.js) |
 | 12. Sorted occurences | [101-sorted.js](./101-sorted.js) |
 | 13. Concat files | [102-concat.js](./102-concat.js) |
-
