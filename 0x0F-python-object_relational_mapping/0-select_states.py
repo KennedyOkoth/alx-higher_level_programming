@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""""lISTS ALL THE STYSTES IN A DATABASE"""
 
 import MySQLdb
 import sys
