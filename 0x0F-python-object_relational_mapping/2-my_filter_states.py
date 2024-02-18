@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/python3
 """Filters the ststes in the states table by user input"""
 
 import MySQLdb
